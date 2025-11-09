@@ -2,229 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pulse Service Masters — Lawn mowers & Garden Equipment</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Shop | Home</title>
 
-  <!-- Link your main stylesheet -->
-  <link rel="stylesheet" href="main.css">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/static/css/main.css" onerror="this.href='/main.css'">
+
+  <!-- Fallback minimal styles (for blank-page protection) -->
+  <style>
+    html,body{margin:0;padding:0;background:#f7f7f7;font-family:Arial,Helvetica,sans-serif;color:#222}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+    .site-header{background:#fff;border-bottom:1px solid #ddd}
+    .site-header h1{margin:0;font-size:20px}
+  </style>
 </head>
 <body>
 
-<header class="site-header" role="banner">
-  <div class="container header-flex">
-    <div class="brand">
-      <a href="index.html" aria-label="Pulse Service Masters home">
-        <img src="images/logo.png" alt="Pulse Service Masters logo" />
-      </a>
-      <div class="brand-title">
-        <div class="title">Pulse Service Masters</div>
-        <div class="subtitle">Sales • Servicing • Spare Parts</div>
-      </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1><a href="/" class="logo">My Shop</a></h1>
+      <nav class="nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/products" class="nav-link">Products</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<div class="container">
+  <!-- HERO / BANNER SECTION -->
   <section class="hero">
-    <div class="headline">Your Trusted Partner for Lawn &amp; Garden Equipment</div>
-    <div class="sub">We offer high-quality tools for your garden — sales, service &amp; support. Below are the core services we provide to keep your outdoor equipment running like new.</div>
-
-    <!-- ==========================
-         Product Carousel (above services)
-         ========================== -->
-    <section class="carousel-wrap">
-      <div class="carousel" id="carousel">
-        <div class="track">
-          <div class="slide">
-            <a class="product-card" href="product-brushcutter-2stroke.html">
-              <div class="prod-img">
-                <img src="images/Brush_Cutter_-_2_stroke.jpg" alt="Brush cutter - 2 stroke" />
-              </div>
-              <div class="prod-info">
-                <h3>Brush cutter - 2 stroke</h3>
-                <p>High-power 2-stroke brush cutter suited for heavy vegetation. Requires petrol-oil mix (1:55).</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a class="product-card" href="product-brushcutter.html">
-              <div class="prod-img">
-                <img src="images/Brush_Cutter_-_4_stroke.jpg" alt="Brush cutter - 4 stroke" />
-              </div>
-              <div class="prod-info">
-                <h3>Brush cutter - 4 stroke</h3>
-                <p>The PSM-GX35 4-stroke brush cutter offers efficient grass cutting and light farming performance with low noise and easy handling.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a class="product-card" href="product-chainsaw.html">
-              <div class="prod-img">
-                <img src="images/Chainsaw_-_PSM-Kawasaqi.jpg" alt="Chainsaw - PSM-Kawasaqi" />
-              </div>
-              <div class="prod-info">
-                <h3>Chainsaw - PSM-Kawasaqi</h3>
-                <p>Ideal for cutting logs, tree branches and small to medium trees. Built for durability; delivers high torque and cutting speed.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a class="product-card" href="product-hedge-trimmer.html">
-              <div class="prod-img">
-                <img src="images/Hedge_Trimmer_-_PSM_HT.jpg" alt="Hedge Trimmer - PSM HT" />
-              </div>
-              <div class="prod-info">
-                <h3>Hedge Trimmer - PSM HT</h3>
-                <p>Compact and powerful for tough trimming jobs. Low-vibration design ensures fatigue-free operation.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a class="product-card" href="product-tiller.html">
-              <div class="prod-img">
-                <img src="images/Tiller_-_PSM_PPT.jpg" alt="Tiller – PSM PPT" />
-              </div>
-              <div class="prod-info">
-                <h3>Tiller – PSM PPT</h3>
-                <p>Robust tiller for soil tilling, plunging, weeding, and seedbed preparation.</p>
-              </div>
-            </a>
-          </div>
-        </div> <!-- /.track -->
-      </div> <!-- /.carousel -->
-
-      <div class="center controls-row" style="margin-top:12px">
-        <button class="carousel-prev" aria-label="Previous">◀</button>
-        <button id="pause-btn" aria-label="Pause">⏸ Pause</button>
-        <button class="carousel-next" aria-label="Next">▶</button>
-      </div>
-    </section>
-    <!-- end carousel -->
+    <div class="container">
+      <h2>Welcome to My Shop</h2>
+      <p>Discover top products and unbeatable deals every day.</p>
+      <a href="/products" class="btn-primary">Shop Now</a>
+    </div>
   </section>
 
-  <!-- ==========================
-       Services list (below carousel)
-       ========================== -->
-  <div class="services">
-    <div class="service">
-      <div class="service-item"><h4>Sales of New &amp; Refurbished Equipment</h4></div>
-      <p>Wide range of lawn mowers, trimmers, brushcutters and chainsaws — from lightweight cordless models to professional petrol machines. We offer both new and carefully refurbished options to suit every budget.</p>
+  <!-- FEATURED CATEGORIES -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="/images/electronics.jpg" alt="Electronics">
+          <h3>Electronics</h3>
+        </div>
+        <div class="category-card">
+          <img src="/images/fashion.jpg" alt="Fashion">
+          <h3>Fashion</h3>
+        </div>
+        <div class="category-card">
+          <img src="/images/home.jpg" alt="Home">
+          <h3>Home</h3>
+        </div>
+        <div class="category-card">
+          <img src="/images/sports.jpg" alt="Sports">
+          <h3>Sports</h3>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="service">
-      <div class="service-item"><h4>Full-Service Maintenance &amp; Repairs</h4></div>
-      <p>On-site and in-shop servicing including engine tuning, blade sharpening, carburettor cleaning, spark plug and filter replacement, fuel system servicing and electrical diagnostics.</p>
+  <!-- FEATURED PRODUCTS -->
+  <main id="root" class="container homepage" aria-live="polite">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-list" id="product-list">
+
+      <!-- Example static products; your JS/SPA will override dynamically -->
+      <article class="card">
+        <img class="product-img" src="/images/sample1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p class="muted">Short description.</p>
+        <a class="btn" href="/product/1">View</a>
+      </article>
+
+      <article class="card">
+        <img class="product-img" src="/images/sample2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p class="muted">Short description.</p>
+        <a class="btn" href="/product/2">View</a>
+      </article>
+
+      <article class="card">
+        <img class="product-img" src="/images/sample3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p class="muted">Short description.</p>
+        <a class="btn" href="/product/3">View</a>
+      </article>
+
+      <article class="card">
+        <img class="product-img" src="/images/sample4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p class="muted">Short description.</p>
+        <a class="btn" href="/product/4">View</a>
+      </article>
+
     </div>
+    <div id="load-status" class="empty-note">Loading site... If this remains blank, open DevTools → Console / Network to check for JS errors.</div>
+  </main>
 
-    <div class="service">
-      <div class="service-item"><h4>Genuine Spare Parts &amp; Consumables</h4></div>
-      <p>Original manufacturer parts and high-quality consumables — blades, belts, air filters, oil, spark plugs and replacement batteries — to extend the life of your equipment.</p>
+  <!-- TESTIMONIALS / REVIEWS -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>“Fantastic experience and quality products!”</p>
+          <strong>– Sarah</strong>
+        </div>
+        <div class="testimonial">
+          <p>“Quick delivery and great support.”</p>
+          <strong>– John</strong>
+        </div>
+        <div class="testimonial">
+          <p>“Best online shop for my family needs.”</p>
+          <strong>– Priya</strong>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="service">
-      <div class="service-item"><h4>Warranty Plans &amp; Extended Coverage</h4></div>
-      <p>Affordable warranty and maintenance packages to keep your equipment in top condition for years.</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>About Us</h4>
+        <p>We provide top-quality products with fast delivery and reliable service.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <p>
+          <a href="#">Facebook</a> | 
+          <a href="#">Instagram</a> | 
+          <a href="#">Twitter</a>
+        </p>
+      </div>
     </div>
-
-    <div class="service">
-      <div class="service-item"><h4>Customer Support &amp; Aftercare</h4></div>
-      <p>Helpful phone and email support, spare-part sourcing, maintenance reminders and simple troubleshooting tips to keep you up and running.</p>
+    <div class="footer-bottom">
+      <small>© 2025 My Shop. All Rights Reserved.</small>
     </div>
-  </div>
-  <!-- end services -->
+  </footer>
 
-</div> <!-- /.container -->
+  <!-- JS bundle (update path if needed) -->
+  <script src="/static/js/main.js" defer onerror="document.getElementById('load-status').textContent='App script missing or path incorrect. Check /static/js/main.js'"></script>
 
-<!-- ===== Carousel script (inline) ===== -->
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  const carouselEl = document.getElementById('carousel');
-  if (!carouselEl) return;
-
-  const track = carouselEl.querySelector('.track');
-  const slides = Array.from(track.children);
-  const prev = document.querySelector('.carousel-prev');
-  const next = document.querySelector('.carousel-next');
-  const pauseBtn = document.getElementById('pause-btn');
-
-  let index = 0;
-  let isPaused = false;
-  let timer = null;
-  const SLIDE_INTERVAL_MS = 6000; // 6s per slide (slower)
-
-  const moveTo = (i) => {
-    index = (i + slides.length) % slides.length;
-    track.style.transform = 'translateX(' + (-index * 100) + '%)';
-  };
-
-  function startAutoplay() {
-    stopAutoplay();
-    if (!isPaused) timer = setInterval(() => moveTo(index + 1), SLIDE_INTERVAL_MS);
-  }
-  function stopAutoplay() {
-    if (timer) clearInterval(timer);
-    timer = null;
-  }
-
-  // Prev / Next
-  if (prev) prev.addEventListener('click', () => { moveTo(index - 1); });
-  if (next) next.addEventListener('click', () => { moveTo(index + 1); });
-
-  // Pause/Play button functionality
-  if (pauseBtn) {
-    pauseBtn.addEventListener('click', () => {
-      if (isPaused) {
-        isPaused = false;
-        pauseBtn.textContent = '⏸ Pause';
-        startAutoplay();
-      } else {
-        isPaused = true;
-        pauseBtn.textContent = '▶ Play';
-        stopAutoplay();
-      }
+  <!-- SPA check -->
+  <script>
+    window.addEventListener('load', ()=>{
+      setTimeout(()=>{
+        const root=document.getElementById('root');
+        if(root&&!document.querySelector('[data-app-mounted]')){
+          console.warn('SPA did not mount. Check JS console.');
+        }
+      },1200);
     });
-  }
-
-  // Pause on hover
-  carouselEl.addEventListener('mouseenter', () => { stopAutoplay(); });
-  carouselEl.addEventListener('mouseleave', () => { if (!isPaused) startAutoplay(); });
-
-  // Simple swipe support for mobile
-  let startX = 0;
-  let isDown = false;
-  track.addEventListener('pointerdown', (e) => { isDown = true; startX = e.clientX; track.style.transition = 'none'; });
-  window.addEventListener('pointerup', (e) => {
-    if (!isDown) return;
-    isDown = false;
-    track.style.transition = '';
-    const dx = e.clientX - startX;
-    if (dx > 60) moveTo(index - 1);
-    else if (dx < -60) moveTo(index + 1);
-  });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') moveTo(index - 1);
-    if (e.key === 'ArrowRight') moveTo(index + 1);
-  });
-
-  // Initialize
-  moveTo(0);
-  startAutoplay();
-});
-</script>
-
+  </script>
 </body>
 </html>
