@@ -3,169 +3,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Shop | Home</title>
+  <title>PSM Garden Tools | Home</title>
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="/static/css/main.css" onerror="this.href='/main.css'">
+  <link rel="stylesheet" href="main.css">
 
-  <!-- Fallback minimal styles (for blank-page protection) -->
   <style>
-    html,body{margin:0;padding:0;background:#f7f7f7;font-family:Arial,Helvetica,sans-serif;color:#222}
-    .container{max-width:1200px;margin:0 auto;padding:20px}
-    .site-header{background:#fff;border-bottom:1px solid #ddd}
-    .site-header h1{margin:0;font-size:20px}
+    html,body{margin:0;padding:0;background:#f6f7f9;font-family:Arial,Helvetica,sans-serif;color:#222;}
+    .container{max-width:1200px;margin:0 auto;padding:20px;}
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-flex">
-      <h1><a href="/" class="logo">My Shop</a></h1>
+      <img src="images/logo.png" alt="PSM Logo" class="logo-img">
       <nav class="nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/products" class="nav-link">Products</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO / BANNER SECTION -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h2>Welcome to My Shop</h2>
-      <p>Discover top products and unbeatable deals every day.</p>
-      <a href="/products" class="btn-primary">Shop Now</a>
+      <h1>Welcome to PSM Garden Tools</h1>
+      <p>Your one-stop shop for powerful and reliable outdoor equipment.</p>
+      <a href="products.html" class="btn-primary">Explore Products</a>
     </div>
   </section>
 
-  <!-- FEATURED CATEGORIES -->
-  <section class="categories">
-    <div class="container">
-      <h2 class="section-title">Shop by Category</h2>
-      <div class="category-grid">
-        <div class="category-card">
-          <img src="/images/electronics.jpg" alt="Electronics">
-          <h3>Electronics</h3>
-        </div>
-        <div class="category-card">
-          <img src="/images/fashion.jpg" alt="Fashion">
-          <h3>Fashion</h3>
-        </div>
-        <div class="category-card">
-          <img src="/images/home.jpg" alt="Home">
-          <h3>Home</h3>
-        </div>
-        <div class="category-card">
-          <img src="/images/sports.jpg" alt="Sports">
-          <h3>Sports</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PRODUCTS -->
-  <main id="root" class="container homepage" aria-live="polite">
+  <!-- Featured Products -->
+  <main class="container homepage">
     <h2 class="section-title">Featured Products</h2>
-    <div class="product-list" id="product-list">
-
-      <!-- Example static products; your JS/SPA will override dynamically -->
+    <div class="product-list">
       <article class="card">
-        <img class="product-img" src="/images/sample1.jpg" alt="Product 1">
-        <h3>Product 1</h3>
-        <p class="muted">Short description.</p>
-        <a class="btn" href="/product/1">View</a>
+        <img src="images/Brush_Cutter_-_2_stroke.jpg" alt="Brush Cutter 2 Stroke" class="product-img">
+        <h3>Brush Cutter (2 Stroke)</h3>
+        <p>Powerful cutting performance for your gardening needs.</p>
+        <a href="product-brushcutter-2stroke.html" class="btn">View Details</a>
       </article>
 
       <article class="card">
-        <img class="product-img" src="/images/sample2.jpg" alt="Product 2">
-        <h3>Product 2</h3>
-        <p class="muted">Short description.</p>
-        <a class="btn" href="/product/2">View</a>
+        <img src="images/Chainsaw_-_PSM-Kawasaqi.jpg" alt="Chainsaw" class="product-img">
+        <h3>Chainsaw</h3>
+        <p>Cut with precision using our heavy-duty chainsaws.</p>
+        <a href="product-chainsaw.html" class="btn">View Details</a>
       </article>
 
       <article class="card">
-        <img class="product-img" src="/images/sample3.jpg" alt="Product 3">
-        <h3>Product 3</h3>
-        <p class="muted">Short description.</p>
-        <a class="btn" href="/product/3">View</a>
+        <img src="images/Hedge_Trimmer_-_PSM_HT.jpg" alt="Hedge Trimmer" class="product-img">
+        <h3>Hedge Trimmer</h3>
+        <p>Perfect trimming for beautiful garden edges.</p>
+        <a href="product-hedge-trimmer.html" class="btn">View Details</a>
       </article>
 
       <article class="card">
-        <img class="product-img" src="/images/sample4.jpg" alt="Product 4">
-        <h3>Product 4</h3>
-        <p class="muted">Short description.</p>
-        <a class="btn" href="/product/4">View</a>
+        <img src="images/Tiller_-_PSM_PPT.jpg" alt="Tiller" class="product-img">
+        <h3>Tiller</h3>
+        <p>Effortlessly prepare soil for planting and cultivation.</p>
+        <a href="product-tiller.html" class="btn">View Details</a>
       </article>
-
     </div>
-    <div id="load-status" class="empty-note">Loading site... If this remains blank, open DevTools → Console / Network to check for JS errors.</div>
   </main>
 
-  <!-- TESTIMONIALS / REVIEWS -->
-  <section class="testimonials">
-    <div class="container">
-      <h2 class="section-title">What Our Customers Say</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial">
-          <p>“Fantastic experience and quality products!”</p>
-          <strong>– Sarah</strong>
-        </div>
-        <div class="testimonial">
-          <p>“Quick delivery and great support.”</p>
-          <strong>– John</strong>
-        </div>
-        <div class="testimonial">
-          <p>“Best online shop for my family needs.”</p>
-          <strong>– Priya</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <h4>About Us</h4>
-        <p>We provide top-quality products with fast delivery and reliable service.</p>
+        <h4>About PSM</h4>
+        <p>We specialize in quality power tools and garden machinery for professional and home users.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h4>Follow Us</h4>
-        <p>
-          <a href="#">Facebook</a> | 
-          <a href="#">Instagram</a> | 
-          <a href="#">Twitter</a>
-        </p>
+        <h4>Contact</h4>
+        <p>Email: info@psmtools.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <small>© 2025 My Shop. All Rights Reserved.</small>
+      <small>© 2025 PSM Garden Tools. All Rights Reserved.</small>
     </div>
   </footer>
 
-  <!-- JS bundle (update path if needed) -->
-  <script src="/static/js/main.js" defer onerror="document.getElementById('load-status').textContent='App script missing or path incorrect. Check /static/js/main.js'"></script>
-
-  <!-- SPA check -->
-  <script>
-    window.addEventListener('load', ()=>{
-      setTimeout(()=>{
-        const root=document.getElementById('root');
-        if(root&&!document.querySelector('[data-app-mounted]')){
-          console.warn('SPA did not mount. Check JS console.');
-        }
-      },1200);
-    });
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
