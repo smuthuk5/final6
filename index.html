@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pulse Service Masters — Lawn mowers & Garden Equipment</title>
 
-  <!-- Link external stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Link your main stylesheet -->
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -37,7 +37,9 @@
     <div class="headline">Your Trusted Partner for Lawn &amp; Garden Equipment</div>
     <div class="sub">We offer high-quality tools for your garden — sales, service &amp; support. Below are the core services we provide to keep your outdoor equipment running like new.</div>
 
-    <!-- Enhanced Product Carousel (moved above services) -->
+    <!-- ==========================
+         Product Carousel (above services)
+         ========================== -->
     <section class="carousel-wrap">
       <div class="carousel" id="carousel">
         <div class="track">
@@ -100,8 +102,8 @@
               </div>
             </a>
           </div>
-        </div>
-      </div>
+        </div> <!-- /.track -->
+      </div> <!-- /.carousel -->
 
       <div class="center controls-row" style="margin-top:12px">
         <button class="carousel-prev" aria-label="Previous">◀</button>
@@ -112,7 +114,9 @@
     <!-- end carousel -->
   </section>
 
-  <!-- Services (below carousel) -->
+  <!-- ==========================
+       Services list (below carousel)
+       ========================== -->
   <div class="services">
     <div class="service">
       <div class="service-item"><h4>Sales of New &amp; Refurbished Equipment</h4></div>
@@ -143,7 +147,84 @@
 
 </div> <!-- /.container -->
 
-<!-- script file -->
-<script src="carousel.js"></script>
+<!-- ===== Carousel script (inline) ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const carouselEl = document.getElementById('carousel');
+  if (!carouselEl) return;
+
+  const track = carouselEl.querySelector('.track');
+  const slides = Array.from(track.children);
+  const prev = document.querySelector('.carousel-prev');
+  const next = document.querySelector('.carousel-next');
+  const pauseBtn = document.getElementById('pause-btn');
+
+  let index = 0;
+  let isPaused = false;
+  let timer = null;
+  const SLIDE_INTERVAL_MS = 6000; // 6s per slide (slower)
+
+  const moveTo = (i) => {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+  };
+
+  function startAutoplay() {
+    stopAutoplay();
+    if (!isPaused) timer = setInterval(() => moveTo(index + 1), SLIDE_INTERVAL_MS);
+  }
+  function stopAutoplay() {
+    if (timer) clearInterval(timer);
+    timer = null;
+  }
+
+  // Prev / Next
+  if (prev) prev.addEventListener('click', () => { moveTo(index - 1); });
+  if (next) next.addEventListener('click', () => { moveTo(index + 1); });
+
+  // Pause/Play button functionality
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', () => {
+      if (isPaused) {
+        isPaused = false;
+        pauseBtn.textContent = '⏸ Pause';
+        startAutoplay();
+      } else {
+        isPaused = true;
+        pauseBtn.textContent = '▶ Play';
+        stopAutoplay();
+      }
+    });
+  }
+
+  // Pause on hover
+  carouselEl.addEventListener('mouseenter', () => { stopAutoplay(); });
+  carouselEl.addEventListener('mouseleave', () => { if (!isPaused) startAutoplay(); });
+
+  // Simple swipe support for mobile
+  let startX = 0;
+  let isDown = false;
+  track.addEventListener('pointerdown', (e) => { isDown = true; startX = e.clientX; track.style.transition = 'none'; });
+  window.addEventListener('pointerup', (e) => {
+    if (!isDown) return;
+    isDown = false;
+    track.style.transition = '';
+    const dx = e.clientX - startX;
+    if (dx > 60) moveTo(index - 1);
+    else if (dx < -60) moveTo(index + 1);
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') moveTo(index - 1);
+    if (e.key === 'ArrowRight') moveTo(index + 1);
+  });
+
+  // Initialize
+  moveTo(0);
+  startAutoplay();
+});
+</script>
+
 </body>
 </html>
